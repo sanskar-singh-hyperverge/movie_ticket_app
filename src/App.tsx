@@ -5,6 +5,9 @@ import {HomeHero} from 'movie-design-hv';
 import {BrowserRouter as Router, Route,Routes, BrowserRouter} from 'react-router-dom';
 import IndexLayout from './Layouts/IndexLayout';
 import './App.css';
+import BookingPage from './Layouts/BookingPage';
+import MenuPage from './Layouts/MenuPage';
+import CheckoutPage from './Layouts/CheckoutPage';
 
 function App() {
 
@@ -47,6 +50,18 @@ function App() {
        <BrowserRouter>
           <Routes>
             <Route path='/index' element={<IndexLayout />}></Route>
+            <Route 
+              path='/ticket_details' 
+              element = {<BookingPage />}>
+            </Route>
+            <Route 
+              path='/buy_ticket'
+              element = {<MenuPage/>}>
+            </Route>
+            <Route 
+              path='/buff_ticket'
+              element = {<CheckoutPage/>}>
+            </Route>
           </Routes>
        </BrowserRouter>
     </div>
