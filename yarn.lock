@@ -6724,10 +6724,10 @@ mkdirp@~0.5.1:
   dependencies:
     minimist "^1.2.6"
 
-movie-design-hv@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/movie-design-hv/-/movie-design-hv-1.2.0.tgz#4169f003ab459661baecf499343d48ae98256e81"
-  integrity sha512-ZEMreO/OSCo3aEH3jerDmuUuM7HO7A3cE9Axe4AbuMotH8DQ2Fxu3jrfLlbIuCfShNsk/b95c6VhdQrFVd4y0A==
+movie-design-hv@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/movie-design-hv/-/movie-design-hv-1.5.1.tgz#1637811b3a9a2e7fdf34c09d1c3a3b2d48056568"
+  integrity sha512-sqtWKp40IPHD1aNw84aRLzZKx+dUnH7r61PvLH6m8sGkglxBqMJNddqmGhiGxCOYFzlu5mA9Xhe+QknGU1nAYQ==
   dependencies:
     swiper "^11.2.0"
 
