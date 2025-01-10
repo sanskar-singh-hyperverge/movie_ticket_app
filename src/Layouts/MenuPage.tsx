@@ -39,7 +39,6 @@ const MenuPage: React.FC = () => {
       price: 30,
       quantity: 0
     },
-    // Additional items to make it scrollable
     {
       id: 'family',
       title: 'Family Menu',
@@ -89,7 +88,6 @@ const MenuPage: React.FC = () => {
             ))}
           </div>
 
-          {/* Advantageous Dual Menus Section */}
           <div className="mt-8">
             <div className="flex items-center space-x-2 mb-4">
               <span className="text-white">•</span>
@@ -115,7 +113,6 @@ const MenuPage: React.FC = () => {
         </div>
       </div>
 
-      {/* Fixed bottom section with semi-transparent background */}
       {totalAmount > 0 && (
         <div className="fixed bottom-0 left-0 right-0 bg-black/80 backdrop-blur-sm p-6">
           <div className="flex justify-between items-center">

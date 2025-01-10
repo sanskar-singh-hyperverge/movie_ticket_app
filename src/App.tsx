@@ -19,15 +19,19 @@ function App() {
               element={<IndexPage />}>  
             </Route>
             <Route 
+              path='/sign_in'
+              element = {<CheckoutPage/>}>
+            </Route>
+            <Route 
               path='/ticket_details' 
               element = {<BookingPage />}>
             </Route>
             <Route 
-              path='/buy_ticket'
+              path='/buffet_page'
               element = {<MenuPage/>}>
             </Route>
             <Route 
-              path='/buff_ticket'
+              path='/buy_ticket'
               element = {<CheckoutPage/>}>
             </Route>
           </Routes>

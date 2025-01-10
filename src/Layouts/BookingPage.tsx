@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { SeatSelector, Counter, Button, Stepper } from 'movie-design-hv';
-import TicketCard from '../components/TicketCard';
+import { SeatSelector, Counter, Button, Stepper,TicketCard } from 'movie-design-hv';
+// import TicketCard from '../components/TicketCard';
 
 const BookingPage: React.FC = () => {
   const [adultCount, setAdultCount] = useState<number>(2);

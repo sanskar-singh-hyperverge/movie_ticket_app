@@ -1,39 +1,35 @@
 import React, { useState } from 'react';
 import { Button, Selector, SlideShow } from 'movie-design-hv';
 
-interface TheaterOption {
-  id: string;
-  name: string;
-}
-
-interface TimeOption {
-  id: string;
-  time: string;
-}
-
 interface Slide {
   imageUrl: string;
 }
 
 const CheckoutPage: React.FC = () => {
-  const [selectedTheater, setSelectedTheater] = useState<TheaterOption | null>(null);
-  const [selectedTime, setSelectedTime] = useState<TimeOption | null>(null);
+  const [selectedTheater, setSelectedTheater] = useState<string | null>(null);
+  const [selectedTime, setSelectedTime] = useState<string | null>(null);
 
-  const theaters: TheaterOption[] = [
-    { id: '1', name: 'NY City - Cinema Village' },
-    { id: '2', name: 'LA - Hollywood Theater' },
-    { id: '3', name: 'Chicago - Downtown Cinema' },
+  const theaters: string[] = [
+    'NY City - Cinema Village',
+    'LA - Hollywood Theater',
+    'Chicago - Downtown Cinema'
   ];
 
-  const times: TimeOption[] = [
-    { id: '1', time: 'June 12, 2024 - 20:30 pm' },
-    { id: '2', time: 'June 12, 2024 - 22:30 pm' },
-    { id: '3', time: 'June 13, 2024 - 18:30 pm' },
+  const times: string[] = [
+    'June 12, 2024 - 20:30 pm',
+    'June 12, 2024 - 22:30 pm',
+    'June 13, 2024 - 18:30 pm'
   ];
 
   const slides: Slide[] = [
     {
-      imageUrl: "/api/placeholder/400/200"
+      imageUrl: "https://picsum.photos/300/200"
+    },
+    {
+      imageUrl: "https://picsum.photos/300/200"
+    },
+    {
+      imageUrl: "https://picsum.photos/300/200"
     }
   ];
 
@@ -50,6 +46,7 @@ const CheckoutPage: React.FC = () => {
           borderRadius="16px"
           nameclassName="text-xl font-semibold"
           subclassName="text-gray-400 text-sm"
+          arrowImage='https://img.icons8.com/ios/452/chevron-right.png'
         />
 
         {/* Required Fields Notice */}
@@ -61,34 +58,28 @@ const CheckoutPage: React.FC = () => {
         <div className="space-y-4">
           <Selector
             options={theaters}
-            placeholder="NY City - Cinema Village *"
+            placeholder="Select Theatre *"
             selected={selectedTheater}
             onSelect={setSelectedTheater}
-            // displayKey="name"
             customSize={{ width: "100%", height: "56px" }}
           />
 
           {/* Time Selector */}
           <Selector
             options={times}
-            placeholder="June 12, 2024 - 20:30 pm *"
+            placeholder="Select Time *"
             selected={selectedTime}
             onSelect={setSelectedTime}
-            // displayKey="time"
             customSize={{ width: "100%", height: "56px" }}
           />
 
-          {/* Buffet Products Button */}
-          <div className="border border-purple-600/20 rounded-xl">
-            <Button
-              label="Buffet Products"
-              type="secondary"
-              size="base"
-              onClick={() => {}}
-              className="w-full h-14 bg-transparent hover:bg-purple-600/10 text-purple-600"
-              btnTextClassName="text-purple-600"
-            />
-          </div>
+          <Selector
+            options={[]}
+            placeholder="Buffet Products"
+            selected={null}
+            onSelect={setSelectedTime}
+            customSize={{ width: "100%", height: "56px" }}
+          />
         </div>
       </div>
 
@@ -100,6 +91,9 @@ const CheckoutPage: React.FC = () => {
           size="base"
           onClick={() => {}}
           isDisabled={!selectedTheater || !selectedTime}
+          children={<svg xmlns="http://www.w3.org/200/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>}
         />
       </div>
     </div>
